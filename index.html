@@ -17,25 +17,28 @@
                     <span class="select-label">Как часто вы заходите на сайт</span>
                     <select class="select">
                             <option value="часто" selected>Почти каждый день</option>
-                            <option value="редко">2</option>
+                            <option value="редко">Раз в несколько дней</option>
+                            <option value="редко">Раз в несколько недель</option>
+                            <option value="редко">Несколько раз в год</option>
                     </select>
                 </label>
             </div>
             <div class="checkbox">
                 <span class="checkbox-label">Вы подписаны на e-mail рассылку?</span>
                 <div>
-                    <input type="radio" id="Да" name="drone" value="Да" checked/>
+                    <input type="radio" id="Да" name="drone" value="Да" class="checkbox-value" checked/>
                     <label for="Да">Да</label>
                 </div>
                 <div>
-                    <input type="radio" id="Нет" name="drone" value="Нет" />
+                    <input type="radio" id="Нет" name="drone" value="Нет" class="checkbox-value"/>
+    
                     <label for="Нет">Нет</label>
                 </div>
             </div>
             <div class="form-group-text">
                 <label class="field-group">
                     <span class="field-label">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
-                    <textarea class="field textarea" placeholder="Может, больше рецептов?" required></textarea>
+                    <textarea class="field-textarea" placeholder="Может, больше рецептов?" required></textarea>
                 </label>
             </div>
 
@@ -44,8 +47,11 @@
             </div>
               
         </div>
-        <div class="popup__close"
-            <button class="popup__close__button" type="button">Закрыть окно</button>
+        <div class="popup__close">
+            <button class="popup__close__button" type="button">
+                <span class="visually-hidden">Закрыть окно
+                </span>   
+            </button>
         </div>
     </div>
 
@@ -88,7 +94,7 @@
     <div class="trends">
         <h3 class="trends-top">Сейчас в тренде</h3>
         <section class="trends-section">
-	        <article class="trend">
+	        <article class="trend trend_garden">
                 <div class="trend-text">
                     <ul class="trend-teg">
                         <li class="trend-teg-item">
@@ -104,7 +110,7 @@
                 </div>
             </article>
 
-            <article class="trend">
+            <article class="trend trend_cheese">
                 <div class="trend-text">
                     <ul class="trend-teg">
                         <li class="trend-teg-item">
@@ -118,7 +124,7 @@
                 </div>
             </article>
 
-            <article class="trend">
+            <article class="trend trend_mount">
                 <div class="trend-text">
                     <ul class="trend-teg">
                         <li class="trend-teg-item">
@@ -135,15 +141,15 @@
                 </div>
             </article>
 
-            <article class="trend">
-                <div class="trend-text">
-                    <ul class="trend-teg">
-                        <li class="trend-teg-item">
-                            <a class="trend-teg-link" href="#0">food</a>
-                        </li>
-                        <li class="trend-teg-item">
-                            <a class="trend-teg-link" href="#0">health</a>
-                        </li>
+            <article class="trend trend_lemon">
+              <div class="trend-text">
+                <ul class="trend-teg">
+                  <li class="trend-teg-item">
+                    <a class="trend-teg-link" href="#0">food</a>
+                      </li>
+                      <li class="trend-teg-item">
+                        <a class="trend-teg-link" href="#0">health</a>
+                      </li>
                     </ul>
 
                     <h2 class="trend-name">
@@ -428,58 +434,75 @@
         </aside>
     </div>
 
-    <div class="products">
+    <section class="products">
         <h3 class="products-header">наши изделия</h3>
-        <section class="products-section">
+        <div class="products-block">
+          <div class="products-section">
             <div class="product-img">
-                <img src="images/shop-item-desk1.jpg" class="product-pic" alt="подушка">
+              <picture class="product-pic">
+                <source srcset="" media="(min-width: 600px)">
+                <img src="images/shop-item-desk1.jpg" alt="подушка">
+              </picture>          
             </div>
-            <div class="product-text">
+            <div class="product-description">
                 <h3 class="product-header">подушки на диван</h3>
                 <p class="product-text">Набор из двух подушек с модными принтами. Видео о создании <a class="product-text-link" href="#0">здесь</a>
                 </p>
-                <div class="product-prices">
-                    <span class="product-price product-old-price">1000 ₽</span>
-                    <span class="product-price product-new-price">800 ₽</span>
-                </div>
-                    <button class="product-button" type="button">в магазин</button>
+                <div class="product-about">
+                  <div class="product-about-prices">
+                    <span class="product-about-price product-old-price">1000 ₽</span>
+                    <span class="product-about-price product-new-price">800 ₽</span>
+                  </div>
+                <a class="product-button" href="#">в магазин
+                </a>
                 </div>
             </div>
-        </section>
+          </div>
 
-        <section class="products-section">
-            <div class="product-img">
-                <img src="images/shop-item-desk2.jpg" class="product-pic" alt="подушка">
-            </div>
-            <div class="product-text">
-                <h3 class="product-header">кукла «зайчик»</h3>
-                <p class="product-text">Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a class="product-text-link" href="#0">весенняя серия постов</a> в блоге и несколько подкастов.
-                </p>
-                <div class="product-prices">
-                    <span class="product-price product-new-price">3500 ₽</span>
-                </div>
-                    <button class="product-button" type="button">в магазин</button>
-                </div>
-            </div>
-        </section>
+          <div class="products-section">
+              <div class="product-img">
+                  <picture class="product-pic">
+                      <source srcset="" media="(min-width: 600px)">
+                      <img src="images/shop-item-desk2.jpg" alt="кукла">
+                  </picture>
+              </div>
+              <div class="product-description">
+                  <h3 class="product-header">кукла «зайчик»</h3>
+                  <p class="product-text">Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a class="product-text-link" href="#0">весенняя серия постов</a> в блоге и несколько подкастов.
+                  </p>
+                  <div class="product-about">
+                      <div class="product-about-prices">
+                          <span class="product-about-price product-new-price">3500 ₽</span>
+                      </div>
+                      <a class="product-button" href="#">в магазин
+                      </a>
+                  </div>
+              </div>
+          </div>
 
-        <section class="products-section">
-            <div class="product-img">
-                <img src="images/shop-item-desk3.jpg" class="product-pic" alt="подушка">
-            </div>
-            <div class="product-text">
-                <h3 class="product-header">шестиугольная рамка</h3>
-                <p class="product-text">Необычная рамка для украшения дома из видео<a class="product-text-link" href="#0">«Как сделать рамку из подручных средств за 30 минут»</a>
-                </p>
-                <div class="product-prices">
-                    <span class="product-price product-old-price">500 ₽</span>
-                    <span class="product-price product-new-price">400 ₽</span>
-                </div>
-                    <button class="product-button" type="button">в магазин</button>
-                </div>
-            </div>
-        </section>
-    </div>
+          <div class="products-section">
+              <div class="product-img">
+                  <picture class="product-pic">
+                      <source srcset="" media="(min-width: 600px)">
+                      <img src="images/shop-item-desk3.jpg" alt="рамка">
+                  </picture>
+              </div>
+              <div class="product-description">
+                  <h3 class="product-header">шестиугольная рамка</h3>
+                  <p class="product-text">Необычная рамка для украшения дома из видео<a class="product-text-link" href="#0">«Как сделать рамку из подручных средств за 30 минут»</a>
+                  </p>
+                  <div class="product-about">
+                      <div class="product-about-prices">
+                          <span class="product-about-price product-old-price">500 ₽</span>
+                          <span class="product-about-price product-new-price">400 ₽</span>
+                      </div>
+                      <a class="product-button" href="#">в магазин
+                      </a>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </section>
       
     <footer class="footer">
         <ul class="footer-list">
