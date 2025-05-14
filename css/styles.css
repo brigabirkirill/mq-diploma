@@ -35,33 +35,29 @@
     background-color: rgba(0, 0, 0, 0.75);
     display: flex;
     margin: auto;
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     
   }
   .popup__container {
     width: 390px;
-    height: 590px;
     margin: auto;
     padding-left: 30px;
     padding-right: 30px;
+    padding-bottom: 50px;
     box-sizing: border-box;
     background-color: #ffffff;
     position: relative;
-    background-image: url(../svg/form-x.svg);
-    background-size: 15px;
-    background-repeat: no-repeat;
-    background-position: top -20px right -20px;
   }
   .popup__close {
-    background-image: url(../svg/form-x.svg);
-    background-size: 15px;
-    background-repeat: no-repeat;
-    z-index: 1;
-    cursor: pointer; 
     position: absolute;
-    background-position: center center;
+    background-image: url(../svg/form-x.svg);
+    background-repeat: no-repeat;
+    background-position: right 10px top 10px;
+    background-size: 15px;
+    cursor: pointer; 
   } 
+
   .sign-up__title {
     font-family: open-sans-b, sans-serif;
     text-transform: uppercase;
@@ -110,12 +106,44 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    position: relative;
   }
   .checkbox-label {
     width: 300px;
   }
-  .checkbox-value {
-    color: red;
+  .checkbox-value, .checkbox-value-no {
+    appearance: none;
+    padding-left: 20px;
+  }
+  .checkbox-value-text::before {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background-image: url(../svg/form-empty-circle.svg);
+    top: 38px;
+    left: 0;
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .checkbox-value:checked ~ .checkbox-value-text::before {
+    background-image: url(../svg/form-circle.svg);
+  }
+  .checkbox-value-text-no::before {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background-image: url(../svg/form-empty-circle.svg);
+    top: 38px;
+    left: 57px;
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .checkbox-value-no:checked ~ .checkbox-value-text-no::before {
+    background-image: url(../svg/form-circle.svg);
   }
   .field-label {
     font-family: open-sans-r, sans-serif;
@@ -124,12 +152,11 @@
   .field-textarea {
     resize: none;
     border: none;
-    padding-left: 20px;
+    padding: 20px;
     box-sizing: border-box;
     width: 330px;
     height: 130px;
     margin-top: 10px;
-    padding-top: 20px;
     margin-bottom: 25px;
     background-color: #f4f7f6;
     font-family: open-sans-r, sans-serif;
@@ -317,7 +344,7 @@
   }
 
   .trend-name {
-    font-family: open-sans-r, sans-serif;
+    font-family: open-sans-b, sans-serif;
     text-transform: uppercase;
     color: #ffffff;
     font-size: 14px;

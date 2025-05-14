@@ -7,8 +7,14 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="popup">
+    <div class="popup visually-hidden">
         <div class="popup__container">
+            <div class="popup__close">
+              <button class="popup__close__button" type="button">
+                <span class="visually-hidden">Закрыть окно
+                </span>   
+              </button>
+            </div> 
             <header class="sign-up__header">
                 <h3 class="sign-up__title">ваш фидбек</h3> 
             </header>
@@ -27,12 +33,12 @@
                 <span class="checkbox-label">Вы подписаны на e-mail рассылку?</span>
                 <div>
                     <input type="radio" id="Да" name="drone" value="Да" class="checkbox-value" checked/>
-                    <label for="Да">Да</label>
+                    <label for="Да" class="checkbox-value-text">Да</label>
                 </div>
                 <div>
-                    <input type="radio" id="Нет" name="drone" value="Нет" class="checkbox-value"/>
+                    <input type="radio" id="Нет" name="drone" value="Нет" class="checkbox-value-no"/>
     
-                    <label for="Нет">Нет</label>
+                    <label for="Нет" class="checkbox-value-text-no">Нет</label>
                 </div>
             </div>
             <div class="form-group-text">
@@ -45,14 +51,8 @@
             <div class="send">
                 <button class="send-button"><span class="send-button-label">отправить</span></button>
             </div>
-              
-        </div>
-        <div class="popup__close">
-            <button class="popup__close__button" type="button">
-                <span class="visually-hidden">Закрыть окно
-                </span>   
-            </button>
-        </div>
+             
+        </div> 
     </div>
 
 
@@ -440,7 +440,9 @@
           <div class="products-section">
             <div class="product-img">
               <picture class="product-pic">
-                <source srcset="" media="(min-width: 600px)">
+                <source srcset="images/shop-item-mobile1.jpg" media="(max-width: 767px)">
+                <source srcset="images/shop-item-tablet1.jpg" media="(max-width: 1199)">
+                <source srcset="images/shop-item-desk1.jpg" media="(min-width: 1200px)">
                 <img src="images/shop-item-desk1.jpg" alt="подушка">
               </picture>          
             </div>
@@ -462,7 +464,9 @@
           <div class="products-section">
               <div class="product-img">
                   <picture class="product-pic">
-                      <source srcset="" media="(min-width: 600px)">
+                    <source srcset="images/shop-item-mobile2.jpg" media="(max-width: 767px)">
+                    <source srcset="images/shop-item-tablet2.jpg" media="(max-width: 1199)">
+                    <source srcset="images/shop-item-desk2.jpg" media="(min-width: 1200px)"> 
                       <img src="images/shop-item-desk2.jpg" alt="кукла">
                   </picture>
               </div>
@@ -483,7 +487,9 @@
           <div class="products-section">
               <div class="product-img">
                   <picture class="product-pic">
-                      <source srcset="" media="(min-width: 600px)">
+                    <source srcset="images/shop-item-mobile3.jpg" media="(max-width: 767px)">
+                    <source srcset="images/shop-item-tablet3.jpg" media="(max-width: 1199)">
+                    <source srcset="images/shop-item-desk3.jpg" media="(min-width: 1200px)">
                       <img src="images/shop-item-desk3.jpg" alt="рамка">
                   </picture>
               </div>
